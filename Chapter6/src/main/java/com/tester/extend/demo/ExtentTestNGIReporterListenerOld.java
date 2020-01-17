@@ -21,7 +21,7 @@ public class ExtentTestNGIReporterListenerOld implements IReporter {
 
     private ExtentReports extent;
 
-    @Override
+
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
         init();
         boolean createSuiteNode = false;
@@ -135,7 +135,7 @@ public class ExtentTestNGIReporterListenerOld implements IReporter {
         if (tests.size() > 0) {
             //调整用例排序，按时间排序
             Set<ITestResult> treeSet = new TreeSet<ITestResult>(new Comparator<ITestResult>() {
-                @Override
+
                 public int compare(ITestResult o1, ITestResult o2) {
                     return o1.getStartMillis()<o2.getStartMillis()?-1:1;
                 }
